@@ -8,17 +8,30 @@
     <script src="mds.js" defer="defer" charset="utf-8"></script>
   </head>
   <body>
+
     <div class="mds-text-field">
       <input type="text" class="mds-text-field__input">
-      <label class="mds-text-field__label">Hint text</label>
+      <label class="mds-text-field__label">Name</label>
+      <span class="mds-text-field__bar"></span>
     </div>
 
     <div class="mds-switch">
-      <input class="mds-switch__input" id="switch__input--checked" checked="checked" type="checkbox">
-      <label class="mds-switch__lable" for="switch__input--checked"></label>
-
       <input class="mds-switch__input" id="switch__input" type="checkbox">
       <label class="mds-switch__lable" for="switch__input"></label>
     </div>
+
+    <label class="mds-checkbox">
+      <input class="mds-checkbox__input" type="checkbox">
+      <span class="mds-checkbox__span"></span>
+    </label>
+
+    <label class="mds-radio">1
+      <input class="mds-radio__input" type="radio" name="radio" checked="checked">
+      <span class="mds-radio__span"></span>
+    </label>
+    <label class="mds-radio">2
+      <input class="mds-radio__input" type="radio" name="radio">
+      <span class="mds-radio__span"></span>
+    </label>
   </body>
 </html>
