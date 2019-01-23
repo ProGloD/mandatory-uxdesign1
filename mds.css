@@ -19,6 +19,7 @@ body {
 .mds-text-field {
   position: relative;
   border-radius: 4px;
+  margin-top: 10px;
 }
 
 .mds-text-field__input {
@@ -30,7 +31,12 @@ body {
   border: none;
   border-bottom: 1px solid #757575;
   outline: none;
+  background-color: #e8e8e8;
   caret-color: var(--color-primary);
+}
+
+.mds-text-field__input:disabled {
+  background-color: #b8b8b8;
 }
 
 .mds-text-field__label {
@@ -147,6 +153,23 @@ body {
   transform: translate(80%, -50%);
 }
 
+.mds-switch__input:checked:disabled+.mds-switch__lable::before {
+  background-color: #CCB8E6;
+}
+
+.mds-switch__input:checked:disabled+.mds-switch__lable::after {
+  background-color: #B38DE8;
+  transform: translate(80%, -50%);
+}
+
+.mds-switch__input:disabled+.mds-switch__lable::before {
+  background-color: #C8C8C8;
+}
+
+.mds-switch__input:disabled+.mds-switch__lable::after {
+  background-color: #EEEEEE;
+}
+
 /*    Checkbox     */
 .mds-checkbox {
   margin-top: 1rem;
@@ -155,6 +178,10 @@ body {
   cursor: pointer;
   font-size: 22px;
   user-select: none;
+}
+
+.mds-checkbox:last-child {
+  margin-left: 2rem;
 }
 
 .mds-checkbox__input {
@@ -171,13 +198,22 @@ body {
   left: 0;
   height: 24px;
   width: 24px;
-  border: 2px solid #9E9E9E;
+  border: 2px solid #5B5B5B;
   border-radius: 4px;
 }
 
 .mds-checkbox__input:checked~.mds-checkbox__span {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
+}
+
+.mds-checkbox__input:checked:disabled~.mds-checkbox__span {
+  background-color: #8D8D8D;
+  border-color: #8D8D8D;
+}
+
+.mds-checkbox__input:disabled~.mds-checkbox__span {
+  border-color: #8D8D8D;
 }
 
 .mds-checkbox__span::after {
@@ -206,6 +242,10 @@ body {
   cursor: pointer;
   font-size: 20px;
   user-select: none;
+}
+
+.mds-radio:not(:first-child) {
+  margin-left: 1rem;
 }
 
 .mds-radio__input {
@@ -243,4 +283,17 @@ body {
 
 .mds-radio__input:checked~.mds-radio__span::after {
   display: block;
+}
+
+.mds-radio__input:disabled~.mds-radio__span {
+  border-color: #8D8D8D;
+}
+
+.mds-radio__input:checked:disabled~.mds-radio__span {
+  border-color: #979797;
+  background-color: #979797;
+}
+
+.mds-radio__input:checked:disabled~.mds-radio__span::after {
+  background-color: #979797;
 }
